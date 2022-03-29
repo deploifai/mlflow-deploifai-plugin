@@ -1,0 +1,8 @@
+#IDE related
+.idea/
+.vscode/
+
+# Project build environment
+.venv/
+build/
+mlflow_deploifai.egg-info/
