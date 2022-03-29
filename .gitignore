@@ -6,3 +6,4 @@
 .venv/
 build/
 mlflow_deploifai.egg-info/
+**/__pycache__
