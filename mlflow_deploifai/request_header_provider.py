@@ -10,7 +10,7 @@ class DeploifaiRequestHeaderProvider(RequestHeaderProvider):
   def request_headers(self):
     added_headers = {}
 
-    _deploifai_run_id = os.environ.get("", default="")
+    _deploifai_run_id = os.environ.get("USER_EXPERIMENT_RUN_ID", default="")
     if _deploifai_run_id is not "":
       added_headers.update({"deploifai-runid": _deploifai_run_id})
 
