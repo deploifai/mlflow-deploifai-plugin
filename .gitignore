@@ -4,6 +4,6 @@
 
 # Project build environment
 .venv/
-build/
+dist/
 mlflow_deploifai.egg-info/
 **/__pycache__
