@@ -7,3 +7,6 @@
 dist/
 mlflow_deploifai.egg-info/
 **/__pycache__
+
+# misc
+.DS_Store
