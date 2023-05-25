@@ -21,6 +21,9 @@ jobs:
       - name: Install requirements
         run: pip3 install -q -r requirements.txt
 
+      - name: Install build dependencies
+        run: pip3 install -q twine build
+
       - name: Build distribution packages
         run: python3 -m build
 
