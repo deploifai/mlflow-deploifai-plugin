@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="mlflow-deploifai",
-    version="0.0.2",
+    version="0.0.3",
     author="Deploifai Limited",
     description="Deploifai plugin for MLflow",
     long_description=long_description,
@@ -13,8 +13,8 @@ setup(
     url="https://github.com/deploifai/mlflow-deploifai-plugin",
     python_requires=">=3.7",
     packages=find_packages(),
-    # Require MLflow as a dependency of the plugin, so that plugin users can simply install
-    # the plugin & then immediately use it with MLflow
+    # Require MLFlow as a dependency of the plugin, so that plugin users can simply install
+    # the plugin & then immediately use it with MLFlow
     install_requires=["mlflow"],
     entry_points={
         "mlflow.request_header_provider":

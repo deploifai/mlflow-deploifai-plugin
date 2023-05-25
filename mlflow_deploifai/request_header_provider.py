@@ -7,9 +7,12 @@ from mlflow.tracking.fluent import active_run, _get_experiment_id, get_experimen
 
 
 class DeploifaiRequestHeaderProvider(RequestHeaderProvider):
-    # set class variable to identify deploifai experiment run so that all mlflow runs get associated with the same deploifai experiment run
-    # if USER_EXPERIMENT_RUN_ID environment variable is not set, generate a new deploifai experiment run using a new uuid
-    _deploifai_run_id = os.environ.get("USER_EXPERIMENT_RUN_ID", default=str(uuid.uuid4()))
+    # set class variable to identify deploifai experiment run so that all mlflow runs get associated with the same
+    # deploifai experiment run if USER_EXPERIMENT_RUN_ID environment variable is not set, generate a new deploifai
+    # experiment run using a new uuid
+    _deploifai_run_id = os.environ.get(
+        "USER_EXPERIMENT_RUN_ID", default=str(uuid.uuid4())
+    )
 
     def in_context(self):
         return True
